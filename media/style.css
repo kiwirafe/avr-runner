@@ -107,12 +107,12 @@ h1 {
 
 .panel-code {
     margin-right: auto;
-    width: 44%;
+    width: 40%;
     float: left;
 }
 
 .panel-cpu-and-memory {
-    width: 54%;
+    width: 58%;
     float: right;
 }
 

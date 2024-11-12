@@ -3,7 +3,7 @@
   "displayName": "AVR Runner",
   "description": "An VSCode extention that runs AVR code",
   "publisher": "kiwirafe",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "engines": {
     "vscode": "^1.85.0"
   },
@@ -17,7 +17,7 @@
   },
   "bugs": {
     "url": "https://github.com/kiwirafe/avr-runner/issues",
-    "email": "kiwriafe@gmail.com"
+    "email": "kiwirafe@gmail.com"
   },
   "homepage": "https://github.com/kiwirafe/avr-runner",
   "files": [
