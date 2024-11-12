@@ -1,0 +1,56 @@
+{
+    "fileTypes": [
+      "asm",
+      "avr"
+    ],
+    "name": "AVR Runner",
+    "scopeName": "source.avr",
+    "patterns": [
+      {
+        "name": "keyword.control.avr",
+        "match": "(?i)\\b(des|rjmp|ijmp|eijmp|jmp|rcall|icall|eicall|call|ret|reti|cpse|cp|cpc|cpi|sbrc|sbrs|sbic|sbis|brbs|brbc|breq|brne|brcs|brcc|brsh|brlo|brmi|brpl|brge|brlt|brhs|brhc|brts|brtc|brvs|brvc|brie|brid)\\b(?i)"
+      },
+      {
+        "match": "(?i)\\b(add|adc|adiw|sub|subi|sbc|sbci|sbiw|and|andi|or|ori|eor|com|neg|sbr|cbr|inc|dec|tst|clr|ser|mul|muls|mulsu|fmul|fmuls|fmulsu|mov|movw|ldi|lds|ld|ldd|ld|ldd|sts|st|std|st|std|lpm|elpm|spm|in|out|push|pop|xch|las|lac|lat|lsl|lsr|rol|ror|asr|swap|bset|bclr|sbi|cbi|bst|bld|sec|clc|sen|cln|sez|clz|sei|cli|ses|cls|sev|clv|set|clt|seh|clh|break|nop|sleep|wdr)\\b(?i)",
+        "name": "keyword.function.avr"
+      },
+      {
+        "match": "(?i)\\.\\b(byte|cseg|db|def|device|dseg|dw|endmacro|equ|eseg|exit|include|list|listmac|macro|nolist|org|set|space)\\b(?i)",
+        "name": "storage.type.avr"
+      },
+      {
+        "match": "(?i)\\b(low|high|byte2|byte3|byte4|lwrd|hwrd|page|exp2|log2)\\b(?i)",
+        "name": "entity.name.class.avr"
+      },
+      {
+        "match": "(\\w)+:",
+        "name": "entity.name.function.avr"
+      },
+      {
+        "match": "(!=|!|~|-|\\*|/|\\+|\\<\\<|\\>\\>|\\<=|\\>=|\\<|\\>|==|=|\\^|&&|&|\\|\\||\\|)",
+        "name": "keyword.operator.avr"
+      },
+      {
+        "match": "\\b((r|R)(([12]?[0-9])|(3[01]))|[XYZ])\\b",
+        "name": "variable.other.registers.avr"
+      },
+      {
+        "match": "(\\b((0(x|X)[0-9a-fA-F]*)|(0(b|B)[01]*)|([0-9]+))\\b)|(\\$[0-9a-fA-F]*)",
+        "name": "constant.numeric.avr"
+      },
+      {
+        "begin": ";",
+        "end": "$\\n?",
+        "name": "comment.line.semicolon.avr"
+      },
+      {
+        "begin": "\"",
+        "end": "\"",
+        "name": "string.quoted.double.avr"
+      },
+      {
+        "match": "'(.{1})'",
+        "name": "string.quoted.single.avr"
+      }
+    ]
+  }

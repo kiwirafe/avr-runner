@@ -1,0 +1,86 @@
+{
+  "name": "avr-runner",
+  "displayName": "AVR Runner",
+  "description": "An VSCode extention that runs AVR code",
+  "publisher": "kiwirafe",
+  "version": "0.1.2",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Other"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kiwirafe/avr-runner.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kiwirafe/avr-runner/issues",
+    "email": "kiwriafe@gmail.com"
+  },
+  "homepage": "https://github.com/kiwirafe/avr-runner",
+  "files": [
+    "out",
+    "media",
+    "package.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "avr-runner.runCode",
+        "title": "Run AVR"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "avr-runner.runCode",
+        "key": "alt+r"
+      }
+    ],
+		"languages": [
+			{
+				"id": "avr",
+				"extensions": [
+					".asm",
+					".avr"
+				],
+        "aliases": [
+          "AVR",
+          "AVR Assembly Language"
+        ],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "avr",
+				"scopeName": "source.avr",
+				"path": "./syntaxes/avr.tmLanguage.json"
+			}
+		]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.9",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.85.0",
+    "@typescript-eslint/eslint-plugin": "^8.10.0",
+    "@typescript-eslint/parser": "^8.7.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.13.0",
+    "typescript": "^5.6.3"
+  }
+}
