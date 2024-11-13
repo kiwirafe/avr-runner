@@ -46,6 +46,21 @@ export function activate(context: vscode.ExtensionContext) {
 					panel.onDidDispose(() => {
                         panel = undefined;
                     }, null, context.subscriptions);
+
+					panel.onDidChangeViewState((e) => {
+						if (e.webviewPanel.visible) {
+							if (panel && editor) {
+								// When the file is saved, update the WebView content
+								const fileContent = editor.document.getText();
+								if (fileContent) {
+									panel.webview.postMessage({
+										command: 'updateContent',
+										content: fileContent
+									});
+								}
+							}
+						}
+					})
 				}
 		
 
@@ -91,7 +106,7 @@ export function activate(context: vscode.ExtensionContext) {
 		
 	vscode.workspace.onDidSaveTextDocument(async (d) => {
         if (panel && editor) {
-				if (editor.document == d) {
+			if (editor.document == d) {
 				// When the file is saved, update the WebView content
 				const fileContent = editor.document.getText();
 				if (fileContent) {

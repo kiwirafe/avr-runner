@@ -12,6 +12,7 @@ To use the extension:
 ![Demo](image.png)
 
 ## New Version
+v0.1.4: Solved issue where Webview refocused retreives outdated code.
 v0.1.3: Prettified HTML  
 v0.1.2: Added PMEM and re-organized HTML  
 v0.1.1: Added code colouring support  
