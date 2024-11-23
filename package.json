@@ -1,15 +1,22 @@
 {
   "name": "avr-runner",
   "displayName": "AVR Runner",
-  "description": "An VSCode extention that runs AVR code",
+  "description": "A VSCode extention that runs AVR code",
   "publisher": "kiwirafe",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "engines": {
     "vscode": "^1.85.0"
   },
   "categories": [
     "Programming Languages",
     "Other"
+  ],
+  "license": "MIT",
+  "keywords": [
+      "asm",
+      "avr",
+      "Assembly Language",
+      "AVR Language"
   ],
   "repository": {
     "type": "git",
@@ -20,6 +27,7 @@
     "email": "kiwirafe@gmail.com"
   },
   "homepage": "https://github.com/kiwirafe/avr-runner",
+  "icon": "assets/icon.png",
   "files": [
     "out",
     "media",

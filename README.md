@@ -1,22 +1,20 @@
 # AVR Runner
 
 ### A VSCode Extension that runs AVR Code
-This is a VSCode extension that runs AVR Code using jonopriestley's [avrsim](https://github.com/jonopriestley/avrsim).
+This is a VSCode extension that allows users to run AVR code using [avrsim](https://github.com/jonopriestley/avrsim).
 
 ## Usage
 To use the extension: 
 1. Install "AVR Runner" on VSCode Extension Marketplace.
 
-2. Write AVR code in .asm files and press alt+r to start the extension. Then you can do all the actions on the right panel (such as assemble code, run all, etc). Note the extension autmatically updates the code to the right on file save. 
+2. Write AVR code in .asm files and press alt+r to start the extension. This will start a new panel on the right.
 
-![Demo](image.png)
+3. On the right panel, first press `Assemble Code`. Then you can choose to `Run All` which runs all the code at once, or `Step` which runs the number of lines specified. Other buttons should be self-explanatory.  
+Note the extension autmatically updates the code to the right on file save. 
+
+![Demo](assets/image.png)
 
 ## New Version
-v0.1.4: Solved issue where Webview refocused retreives outdated code.
-v0.1.3: Prettified HTML  
-v0.1.2: Added PMEM and re-organized HTML  
-v0.1.1: Added code colouring support  
-##### v0.1.0:  
-- Solved issue that cannot open WebView panel twice.
-- Updated so that the extension autmatically updates the code to the right on file save. 
-- Uploaded on GitHub.
+v0.1.5: Added more README
+v0.1.4: Solved issue where Webview refocused retreives outdated code  
+v0.1.3: Prettified HTML
